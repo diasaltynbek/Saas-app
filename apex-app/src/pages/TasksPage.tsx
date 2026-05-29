@@ -1,11 +1,10 @@
-import React, { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { AvatarStack } from '../components/ui';
 import { TAG_CONFIG, STATUS_CONFIG, STATUS_ORDER, formatDate, isOverdue } from '../lib/utils';
 import { USERS } from '../data/mockData';
 import type { Task, TaskStatus } from '../types';
 
-const COL_CONFIG = STATUS_ORDER.map(id => STATUS_CONFIG[id]);
 const userMap = Object.fromEntries(USERS.map(u => [u.id, u]));
 
 // ─── Task card ────────────────────────────────────────────────────────────────

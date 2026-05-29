@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Card, SectionHeader, Avatar } from '../components/ui';
+import { useState } from 'react';
+import { Card, Avatar } from '../components/ui';
 import { USERS } from '../data/mockData';
 
 const INBOX_ITEMS = [
@@ -9,13 +9,6 @@ const INBOX_ITEMS = [
   { id: '4', from: USERS[2], subject: 'API docs updated', preview: "'I've pushed the updated API documentation to Notion. All the new rate limiting endpoints are documented with examples.'", time: 'Yesterday', read: true, type: 'update' },
   { id: '5', from: USERS[4], subject: 'Infrastructure update', preview: "'I've set up the Prometheus metrics and Grafana dashboards as requested. Staging and prod are both monitored now.'", time: 'Mon', read: true, type: 'update' },
 ];
-
-const TYPE_CONFIG: Record<string, { icon: string; color: string; bg: string }> = {
-  mention: { icon: '@',  color: '#7c6fff', bg: 'rgba(124,111,255,0.15)' },
-  pr:      { icon: '⎇',  color: '#00d4aa', bg: 'rgba(0,212,170,0.12)'   },
-  meeting: { icon: '📅', color: '#ffb347', bg: 'rgba(255,179,71,0.12)'  },
-  update:  { icon: '📝', color: '#60a5fa', bg: 'rgba(96,165,250,0.12)'  },
-};
 
 export function InboxPage() {
   const [selected, setSelected] = useState(INBOX_ITEMS[0]);
@@ -47,7 +40,6 @@ export function InboxPage() {
         </div>
         <div style={{ overflowY: 'auto', flex: 1 }}>
           {items.map(item => {
-            const typeInfo = TYPE_CONFIG[item.type];
             const isSelected = selected?.id === item.id;
             return (
               <div

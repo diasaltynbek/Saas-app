@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useAppStore } from '../../store/useAppStore';
 import { Avatar, IconBtn } from '../ui';
 import { NotificationPanel } from '../ui/NotificationPanel';

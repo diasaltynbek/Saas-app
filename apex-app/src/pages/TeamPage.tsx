@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Card, SectionHeader, Avatar } from '../components/ui';
 import { useAppStore } from '../store/useAppStore';
 import { USERS } from '../data/mockData';
@@ -37,7 +37,7 @@ function MemberCard({ user }: { user: typeof USERS[0] }) {
 }
 
 // ─── Chat bubble ──────────────────────────────────────────────────────────────
-function ChatBubble({ msg }: { msg: ReturnType<typeof useAppStore>['chatMessages'][0] }) {
+function ChatBubble({ msg }: { msg: any }) {
   return (
     <div style={{ display: 'flex', gap: 8, flexDirection: msg.isMe ? 'row-reverse' : 'row', alignItems: 'flex-end' }}>
       {!msg.isMe && (

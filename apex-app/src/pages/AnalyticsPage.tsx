@@ -1,10 +1,8 @@
-import React from 'react';
 import { Card, ProgressBar, SectionHeader } from '../components/ui';
 import { WEEKLY_CHART_DATA, CATEGORY_BREAKDOWN, USERS } from '../data/mockData';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, RadialBarChart, RadialBar, Cell,
-  LineChart, Line, Legend,
+  ResponsiveContainer, 
 } from 'recharts';
 
 // ─── Custom tooltip ───────────────────────────────────────────────────────────

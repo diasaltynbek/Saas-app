@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card, SectionHeader } from '../components/ui';
 import { CALENDAR_EVENTS } from '../data/mockData';
 import { getDaysInMonth, getFirstDayOfMonth } from '../lib/utils';
@@ -6,14 +6,6 @@ import type { CalendarEvent } from '../types';
 
 const DAYS_SHORT = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-
-const EVENT_TYPE_COLOR: Record<string, string> = {
-  meeting:  'var(--brand)',
-  deadline: 'var(--rose)',
-  review:   'var(--teal)',
-  sync:     'var(--amber)',
-  demo:     'var(--blue)',
-};
 
 export function CalendarPage() {
   const today = new Date();

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card, Toggle, Avatar, SectionHeader } from '../components/ui';
 import { useAppStore } from '../store/useAppStore';
 

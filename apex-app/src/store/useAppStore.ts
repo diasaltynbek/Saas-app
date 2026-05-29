@@ -176,7 +176,7 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: 'apex-app-store',
-      partialState: (state) => ({
+      partialize: (state: AppState) => ({
         theme: state.theme,
         sidebarCollapsed: state.sidebarCollapsed,
         isLoggedIn: state.isLoggedIn,

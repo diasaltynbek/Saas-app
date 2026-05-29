@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, ProgressBar, SectionHeader } from '../components/ui';
 import { METRIC_CARDS, SPRINT_PROGRESS, ACTIVITY_ITEMS, USERS, MONTHLY_TREND } from '../data/mockData';
 import {
@@ -83,7 +82,6 @@ function StatCard({ card }: { card: typeof METRIC_CARDS[number] }) {
 
 // ─── Dashboard ────────────────────────────────────────────────────────────────
 export function DashboardPage() {
-  const userMap = Object.fromEntries(USERS.map(u => [u.id, u]));
 
   return (
     <div className="page-enter">
